@@ -1,0 +1,12 @@
+version: "3"
+services:
+  nodejs:
+    build: alpine 
+    image: qiaodapei/jenkins-jnlp-agent-nodejs:alpine-2.164.3 
+    container_name: oms-client
+    restart: always
+    privileged: true
+    environment:
+      - JENKINS_URL=http://192.168.0.28:8080/computer/oms-client/slave-agent.jnlp
+      - JENKINS_SECRET=0d83f337096e12a3ab36072a2c87c70242bac40afdfff80cc76c90fb79614dd0
+      - JENKINS_AGENT_WORKDIR=/data/jenkins_home
