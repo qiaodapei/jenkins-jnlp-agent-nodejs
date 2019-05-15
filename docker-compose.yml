@@ -1,7 +1,7 @@
 version: "3"
 services:
   nodejs:
-    build: alpine 
+    build: centos 
     image: qiaodapei/jenkins-jnlp-agent-nodejs:alpine-2.164.3 
     container_name: oms-client
     restart: always
